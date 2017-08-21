@@ -1,0 +1,3 @@
+价格-0-5 http://price.pcauto.com.cn/price/q-p1
+价格-5-8 http://price.pcauto.com.cn/price/q-p2
+价格-8-10 http://price.pcauto.com.cn/price/q-p3

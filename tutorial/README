@@ -1,0 +1,6 @@
+New Scrapy project 'tutorial', using template directory '/usr/local/lib/python2.7/site-packages/scrapy/templates/project', created in:
+    /Users/yuxuecheng/Work/BCData/Source/dmp/scrapy_spiders/tutorial
+
+You can start your first spider with:
+    cd tutorial
+    scrapy genspider example example.com
