@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # encoding: utf-8
 
 """
@@ -16,6 +16,8 @@ import logging
 import chardet
 import pymongo
 import scrapy
+
+from ..items import MovieItem
 
 enable_coding = ['UTF-8', 'GBK', 'GB2312']
 
@@ -55,7 +57,7 @@ class MovieSpider(scrapy.Spider):
     def parse(self, response):
         # self.log("status: %d, content: %s" % (response.status, response.body), logging.INFO)
         if response.status == 200:
-            data = json.loads(response.body)
+            data = json.loads(response.text)
             movie_list = data['subjects']
             for i in range(len(movie_list)):
                 movie_data = movie_list[i]
@@ -103,21 +105,38 @@ class MovieSpider(scrapy.Spider):
                     pass
                 keywords = response.xpath("//meta[@name='keywords']/@content").extract()[0]
                 description = response.xpath("//meta[@name='description']/@content").extract()[0]
-                yield {
-                    "movie_id": int(movie_id),
-                    "movie_name": name,
-                    "year": int(year),
-                    "rating_average": float(rating_average),
-                    "rating_sum": int(rating_sum),
-                    "directors": u",".join(directors),
-                    "actors": u",".join(actors),
-                    "categories": u",".join(genres),
-                    "show_time": show_time,
-                    "duration": duration,
-                    "keywords": keywords,
-                    "description": description,
-                    "url": response.url,
-                }
+
+                item = MovieItem()
+                item["movie_id"] = int(movie_id)
+                item["movie_name"] = name
+                item["movie_year"] = int(year)
+                item["rating_average"] = float(rating_average)
+                item["rating_sum"] = int(rating_sum)
+                item["directors"] = u",".join(directors)
+                item["actors"] = u",".join(actors)
+                item["categories"] = u",".join(genres)
+                item["show_time"] = show_time
+                item["duration"] = duration
+                item["keywords"] = keywords
+                item["description"] = description
+                item["url"] = response.url
+
+                yield item
+                # yield {
+                #     "movie_id": int(movie_id),
+                #     "movie_name": name,
+                #     "year": int(year),
+                #     "rating_average": float(rating_average),
+                #     "rating_sum": int(rating_sum),
+                #     "directors": u",".join(directors),
+                #     "actors": u",".join(actors),
+                #     "categories": u",".join(genres),
+                #     "show_time": show_time,
+                #     "duration": duration,
+                #     "keywords": keywords,
+                #     "description": description,
+                #     "url": response.url,
+                # }
             except IndexError:
                 self.log("process url %s error!" % response.url, logging.ERROR)
                 pass

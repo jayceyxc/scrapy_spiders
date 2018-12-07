@@ -61,8 +61,12 @@ class PcautoSpider(scrapy.Spider):
         # series
         series_list = response.xpath("//div[@class='lieBiao']")
         for series in series_list:
-            series_name = series.xpath("./div[@class='thlieBiao']/div[@class='con']/div[@class='tit blue']/strong/a/text()").extract()[0]
-            series_url = series.xpath("./div[@class='thlieBiao']/div[@class='con']/div[@class='tit blue']/strong/a/@href").extract()[0]
+            if response.url.find("rank") > 0:
+                series_name = series.xpath("./div[@class='thlieBiao']/div[@class='con']/i[@class='tit blue']/strong/a/text()").extract()[0]
+                series_url = series.xpath("./div[@class='thlieBiao']/div[@class='con']/i[@class='tit blue']/strong/a/@href").extract()[0]
+            else:
+                series_name = series.xpath("./div[@class='thlieBiao']/div[@class='con']/div[@class='tit blue']/strong/a/text()").extract()[0]
+                series_url = series.xpath("./div[@class='thlieBiao']/div[@class='con']/div[@class='tit blue']/strong/a/@href").extract()[0]
             series_url = "http://price.pcauto.com.cn" + series_url
             series_item = CarItem()
             series_item["refer"] = response.url

@@ -6,7 +6,7 @@
 @author: ‘yuxuecheng‘
 @contact: yuxuecheng@baicdata.com
 @software: PyCharm Community Edition
-@file: launch.py.py
+@file: launch_movie.py.py
 @time: 19/08/2017 13:03
 """
 

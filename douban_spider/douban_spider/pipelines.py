@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 # Define your item pipelines here
@@ -7,6 +8,7 @@
 
 import pymongo
 import json
+from .items import MovieItem, EmailItem
 
 
 class JsonPipeline(object):
@@ -14,9 +16,10 @@ class JsonPipeline(object):
         self.file = open('movies.json', 'wb')
 
     def process_item(self, item, spider):
-        line = json.dumps(dict(item)) + "\n"
-        self.file.write(line)
-        return item
+        if isinstance(item, MovieItem):
+            line = json.dumps(dict(item)) + "\n"
+            self.file.write(line.encode())
+            return item
 
 
 class MongoPipeline(object):
@@ -37,15 +40,15 @@ class MongoPipeline(object):
             collection_name=crawler.settings.get('MONGO_COLLECTION', 'movie_items')
         )
 
-
     def close_spider(self, spider):
         self.client.close()
 
     def process_item(self, item, spider):
         #print "MongoPipeline" + str(item)
-        result = self.db[self.collection_name].find({"movie_id":item["movie_id"]})
-        if result.count() == 0:
-            self.db[self.collection_name].insert(dict(item))
-        else:
-            print result.count()
-        return item
+        if isinstance(item, MovieItem):
+            result = self.db[self.collection_name].find({"movie_id":item["movie_id"]})
+            if result.count() == 0:
+                self.db[self.collection_name].insert(dict(item))
+            else:
+                print(result.count())
+            return item

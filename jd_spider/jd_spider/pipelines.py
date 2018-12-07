@@ -51,7 +51,7 @@ class MongoPipeline(object):
 
 
 class MobileMongoPipeline(object):
-    collection_name = 'mobile_items'
+    collection_name = 'jd_mobile_items'
 
     def __init__(self, mongo_uri, mongo_db):
         self.mongo_uri = mongo_uri
@@ -73,7 +73,7 @@ class MobileMongoPipeline(object):
 
     def process_item(self, item, spider):
         #print "MongoPipeline" + str(item)
-        result = self.db[self.collection_name].find({u"商品ID":item[u"商品ID"]})
+        result = self.db[self.collection_name].find({'ware_id':item['ware_id']})
         if result.count() == 0:
             self.db[self.collection_name].insert(dict(item))
         return item

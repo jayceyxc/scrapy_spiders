@@ -91,7 +91,7 @@ class AutohomeSpider(scrapy.Spider):
             yield scrapy.Request(url=chexing_url, callback=self.parse)
         """
         for url in start_url.auto_home_start_urls:
-            yield  scrapy.Request(url=url, callback=self.parse)
+            yield scrapy.Request(url=url, callback=self.parse)
 
     def parse(self, response):
         # series

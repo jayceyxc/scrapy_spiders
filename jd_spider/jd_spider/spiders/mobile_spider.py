@@ -14,6 +14,9 @@ import json
 import chardet
 import requests
 import logging
+import traceback
+
+from jd_spider.items import MobileItem
 
 enable_coding = ['UTF-8', 'GBK', 'GB2312']
 
@@ -40,7 +43,7 @@ class JDMobileSpider(scrapy.Spider):
     collection_name = "mobile_items"
 
     def start_requests(self):
-        for page_index in range(1, 146, 1):
+        for page_index in range(1, 154, 1):
             url = self.url_pattern % page_index
             # print url
             yield scrapy.Request(url=url, callback=self.parse)
@@ -54,9 +57,30 @@ class JDMobileSpider(scrapy.Spider):
         return data['wareDetailComment']['allCnt'], data['wareDetailComment']['goodCnt'], data['wareDetailComment'][
             'normalCnt'], data['wareDetailComment']['badCnt']
 
+    @staticmethod
+    def get_detail_info(ware_id):
+        result = dict()
+        url = 'https://item.m.jd.com/ware/detail.json?wareId=' + str(ware_id)
+        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0'}
+        r2 = requests.get(url=url, headers=headers)
+        try:
+            data = json.loads(r2.text, encoding='utf-8')
+            detail = json.loads(data['ware']['wi']['code'])
+            for info in detail:
+                for key in info.keys():
+                    inner_data = info[key]
+                    for inner_info in inner_data:
+                        for inner_key in inner_info:
+                            result[inner_key] = inner_info[inner_key]
+        except ValueError:
+            # traceback.print_exc()
+            pass
+
+        return result
+
     def parse(self, response):
         mobile_jd_url_pattern = "https://item.m.jd.com/product/%s.html"
-        item_list = response.xpath("//ul[@class='gl-warp clearfix ']/li")
+        item_list = response.xpath("//ul[@class='gl-warp clearfix']/li")
         logging.debug(response.encoding)
         for item in item_list:
             ware_id = item.xpath("./div[@class='gl-i-wrap j-sku-item']/div[@class='p-focus']/a[@class='J_focus']/@data-sku").extract()[0]
@@ -117,27 +141,57 @@ class JDMobileSpider(scrapy.Spider):
             except IndexError:
                 self.log("no color size spec for url: %s" % response.url, logging.WARN)
                 pass
+            except KeyError:
+                self.log("no color size spec for url: %s" % response.url, logging.WARN)
+                pass
             total_comments = 0
             good_comments = 0
             normal_comments = 0
             bad_comments = 0
+            detail_info = dict()
             if ware_id is not None:
                 total_comments, good_comments, normal_comments, bad_comments = self.get_comment_info(ware_id)
-            yield {
-                u"商品ID": ware_id,
-                u"商品名称": good_name,
-                u"京东价": float(jd_price),
-                u"分类ID": category_id,
-                u"店铺ID": int(shop_id),
-                u"颜色分类": u",".join(json.loads(all_color_set)),
-                u"存储分类": u",".join(json.loads(all_size_set)),
-                u"商品规格": all_sku_color_size_spec,
-                u"商品链接": response.url,
-                u"总评价数": int(total_comments),
-                u"好评数": int(good_comments),
-                u"普通评价数": int(normal_comments),
-                u"差评数": int(bad_comments),
-            }
+                detail_info = self.get_detail_info(ware_id)
+
+            mobile_item = MobileItem()
+            mobile_item['ware_id'] = ware_id
+            mobile_item['good_name'] = good_name
+            mobile_item['jd_price'] = float(jd_price)
+            mobile_item['category_id'] = category_id
+            mobile_item['shop_id'] = int(shop_id)
+            mobile_item['color_set'] = u",".join(json.loads(all_color_set))
+            mobile_item['capacity_set'] = u",".join(json.loads(all_size_set))
+            mobile_item['good_url'] = response.url
+            mobile_item['total_comments'] = int(total_comments)
+            mobile_item['good_comments'] = int(good_comments)
+            mobile_item['normal_comments'] = int(normal_comments)
+            mobile_item['bad_comments'] = int(bad_comments)
+            mobile_item['RAM'] = detail_info[u"RAM"] if u"RAM" in detail_info else u"0GB"
+            mobile_item['ROM'] = detail_info[u"ROM"] if u"ROM" in detail_info else u"0GB"
+            mobile_item['OS'] = detail_info[u"操作系统"] if u"操作系统" in detail_info else u"Unknown"
+            if u"CPU型号" in detail_info:
+                mobile_item['CPU'] = detail_info[u"CPU型号"]
+            elif u"CPU品牌" in detail_info:
+                mobile_item['CPU'] = detail_info[u"CPU品牌"]
+            else:
+                mobile_item['CPU'] = u"Unknown"
+            # mobile_item['CPU'] = detail_info[u"CPU型号"] if u"CPU型号" in detail_info else u"Unknown"
+            mobile_item['resolution'] = detail_info[u"分辨率"] if u"分辨率" in detail_info else u"Unknown"
+            mobile_item['display'] = detail_info[u"主屏幕尺寸（英寸）"] if u"主屏幕尺寸（英寸）" in detail_info else u"Unknown"
+            mobile_item['year_to_market'] = detail_info[u"上市年份"] if u"上市年份" in detail_info else u"Unknown"
+            mobile_item['month_to_market'] = detail_info[u"上市月份"] if u"上市月份" in detail_info else u"Unknown"
+            mobile_item['length'] = detail_info[u"机身长度（mm）"] if u"机身长度（mm）" in detail_info else u"Unknown"
+            mobile_item['width'] = detail_info[u"机身宽度（mm）"] if u"机身宽度（mm）" in detail_info else u"Unknown"
+            mobile_item['thickness'] = detail_info[u"机身厚度（mm）"] if u"机身厚度（mm）" in detail_info else u"Unknown"
+            mobile_item['weight'] = detail_info[u"机身重量（g）"] if u"机身重量（g）" in detail_info else u"Unknown"
+            mobile_item['net_in_model'] = detail_info[u"入网型号"] if u"入网型号" in detail_info else u"Unknown"
+            mobile_item['front_camera'] = detail_info[u"前置摄像头"] if u"前置摄像头" in detail_info else u"Unknown"
+            mobile_item['rear_camera'] = detail_info[u"后置摄像头"] if u"后置摄像头" in detail_info else u"Unknown"
+            mobile_item['brand'] = detail_info[u"品牌"] if u"品牌" in detail_info else u"Unknown"
+            mobile_item['model'] = detail_info[u"型号"] if u"型号" in detail_info else u"Unknown"
+            mobile_item['color'] = detail_info[u"机身颜色"] if u"机身颜色" in detail_info else u"Unknown"
+
+            yield mobile_item
         except IndexError:
             self.log("no ware_id or good_name or price for url: %s" % response.url, logging.ERROR)
 

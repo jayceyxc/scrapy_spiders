@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="316a2291-9914-47e7-9a9d-d9c6c50fece9" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/yuxuecheng.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auto_home_spider/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auto_home_spider/export_mongo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auto_home_spider/tag_name_id.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/douban_spider/douban_spider/spiders/email_spider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/douban_spider/launch_email.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/douban_spider/launch_movie.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/download_spider/download_spider/spiders/douban_captcha.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/download_spider/download_spider/user_agents.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/download_spider/launch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/guanggoo_spider/guanggoo_spider/spiders/LoginSpider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/guanggoo_spider/guanggoo_spider/spiders/WeiboLogin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/guanggoo_spider/guanggoo_spider/user_agents.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/guanggoo_spider/launch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jd_pc_spider/jd_pc_spider/spiders/DynamicSpider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jd_pc_spider/jd_pc_spider/user_agents.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jd_pc_spider/launch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/realestate_spider/launch_liangjia.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/realestate_spider/realestate_spider/spiders/anjuke_spider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/realestate_spider/realestate_spider/spiders/fang_spider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/realestate_spider/realestate_spider/spiders/leju_spider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/realestate_spider/realestate_spider/spiders/lianjia_spider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/realestate_spider/realestate_spider/spiders/start_url.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tour_spider/tour_spider/spiders/qunar_spider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tour_spider/tour_spider/spiders/start_url.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zhihu/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zhihu/launch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zhihu/zhihu/spiders/zhihu_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_home_spider/auto_home_spider/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_home_spider/auto_home_spider/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_home_spider/auto_home_spider/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_home_spider/auto_home_spider/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_home_spider/auto_home_spider/label_url/autohome_label_url.txt" beforeDir="false" afterPath="$PROJECT_DIR$/auto_home_spider/auto_home_spider/label_url/autohome_label_url.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_home_spider/auto_home_spider/label_url/pcauto_label_url.txt" beforeDir="false" afterPath="$PROJECT_DIR$/auto_home_spider/auto_home_spider/label_url/pcauto_label_url.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_home_spider/auto_home_spider/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_home_spider/auto_home_spider/middlewares.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_home_spider/auto_home_spider/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_home_spider/auto_home_spider/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_home_spider/auto_home_spider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_home_spider/auto_home_spider/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_home_spider/auto_home_spider/spiders/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_home_spider/auto_home_spider/spiders/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_home_spider/auto_home_spider/spiders/autohome_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_home_spider/auto_home_spider/spiders/autohome_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_home_spider/auto_home_spider/spiders/pcauto_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_home_spider/auto_home_spider/spiders/pcauto_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_home_spider/auto_home_spider/spiders/start_url.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_home_spider/auto_home_spider/spiders/start_url.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_home_spider/cars_url.json" beforeDir="false" afterPath="$PROJECT_DIR$/auto_home_spider/cars_url.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_home_spider/cars_url_bak.json" beforeDir="false" afterPath="$PROJECT_DIR$/auto_home_spider/cars_url_bak.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_home_spider/launch.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_home_spider/launch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_home_spider/launch_pcauto.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_home_spider/launch_pcauto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_home_spider/scrapy.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/auto_home_spider/scrapy.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/douban_spider/douban_spider/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/douban_spider/douban_spider/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/douban_spider/douban_spider/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/douban_spider/douban_spider/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/douban_spider/douban_spider/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/douban_spider/douban_spider/middlewares.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/douban_spider/douban_spider/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/douban_spider/douban_spider/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/douban_spider/douban_spider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/douban_spider/douban_spider/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/douban_spider/douban_spider/spiders/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/douban_spider/douban_spider/spiders/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/douban_spider/douban_spider/spiders/movie_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/douban_spider/douban_spider/spiders/movie_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/douban_spider/movies.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/douban_spider/run_moviespider.sh" beforeDir="false" afterPath="$PROJECT_DIR$/douban_spider/run_moviespider.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/douban_spider/scrapy.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/douban_spider/scrapy.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ip_area_spider/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ip_area_spider/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ip_area_spider/ip_area_spider/id_area_map.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ip_area_spider/ip_area_spider/id_area_map.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ip_area_spider/ip_area_spider/spiders/ip_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/ip_area_spider/ip_area_spider/spiders/ip_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ip_area_spider/ip_area_spider/spiders/rmc_area.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ip_area_spider/ip_area_spider/spiders/rmc_area.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ip_area_spider/json_to_txt.py" beforeDir="false" afterPath="$PROJECT_DIR$/ip_area_spider/json_to_txt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ip_area_spider/launch.py" beforeDir="false" afterPath="$PROJECT_DIR$/ip_area_spider/launch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider/items.json" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider/items.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider/jd_spider/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider/jd_spider/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider/jd_spider/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider/jd_spider/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider/jd_spider/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider/jd_spider/middlewares.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider/jd_spider/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider/jd_spider/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider/jd_spider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider/jd_spider/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider/jd_spider/spiders/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider/jd_spider/spiders/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider/jd_spider/spiders/book_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider/jd_spider/spiders/book_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider/jd_spider/spiders/jd_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider/jd_spider/spiders/jd_interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider/jd_spider/spiders/mobile_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider/jd_spider/spiders/mobile_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider/read_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider/read_json.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider/run.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider/run_bookspider.sh" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider/run_bookspider.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider/run_mobilespider.sh" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider/run_mobilespider.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider/scrapy.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider/scrapy.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider_dist/jd_spider_dist/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider_dist/jd_spider_dist/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider_dist/jd_spider_dist/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider_dist/jd_spider_dist/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider_dist/jd_spider_dist/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider_dist/jd_spider_dist/middlewares.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider_dist/jd_spider_dist/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider_dist/jd_spider_dist/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider_dist/jd_spider_dist/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider_dist/jd_spider_dist/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider_dist/jd_spider_dist/spiders/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider_dist/jd_spider_dist/spiders/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider_dist/jd_spider_dist/spiders/mobile_spiders.py" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider_dist/jd_spider_dist/spiders/mobile_spiders.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider_dist/jd_spider_dist/user_agents.py" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider_dist/jd_spider_dist/user_agents.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider_dist/launch.py" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider_dist/launch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider_dist/push_urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider_dist/push_urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jd_spider_dist/scrapy.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/jd_spider_dist/scrapy.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/README" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/author.json" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/author.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/quote.json" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/quote.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/quotes-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/quotes-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/quotes-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/quotes-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/run_author_spider.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/run_author_spider.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/run_spider.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/run_spider.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/scrapy.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/scrapy.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/tutorial/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/tutorial/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/tutorial/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial/middlewares.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/tutorial/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/tutorial/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/tutorial/spiders/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial/spiders/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/tutorial/spiders/author_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial/spiders/author_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/tutorial/spiders/quotes_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial/spiders/quotes_spider.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="email_spider.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/douban_spider/douban_spider/spiders/email_spider.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1065">
+              <caret line="75" column="77" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="77" />
+              <folding>
+                <element signature="e#186#199#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="movie_spider.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/douban_spider/douban_spider/spiders/movie_spider.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="67" column="36" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
+              <folding>
+                <element signature="e#204#215#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="items.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/douban_spider/douban_spider/items.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" selection-start-line="11" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="launch_email.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/douban_spider/launch_email.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="launch_movie.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/douban_spider/launch_movie.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="22" selection-start-column="22" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scrapy.cfg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/douban_spider/scrapy.cfg">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/douban_spider/douban_spider/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="545">
+              <caret line="78" column="1" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/douban_spider/douban_spider/pipelines.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="middlewares.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/douban_spider/douban_spider/middlewares.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="22" selection-start-column="22" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>吉利</find>
+      <find>瑞麟</find>
+      <find>nb580</find>
+      <find>580</find>
+      <find>瑞</find>
+      <find>瑞麒</find>
+      <find>科尼塞克</find>
+      <find>103</find>
+      <find>100</find>
+      <find>科尼赛克</find>
+      <find>570</find>
+      <find>阿斯顿</find>
+      <find>X001005003</find>
+      <find>X001006003</find>
+      <find>X001002001</find>
+      <find>X001004002</find>
+      <find>X001001005</find>
+      <find>X001003088</find>
+      <find>阿克苏</find>
+      <find>杭州</find>
+      <find>90057000</find>
+      <find>中国</find>
+      <find>朝阳区</find>
+      <find>北京</find>
+      <find>武汉</find>
+      <find>sorted</find>
+      <find>area</find>
+      <find>house_type</find>
+      <find>COOKIES</find>
+      <find>cookiejar</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/realestate_spider/realestate_spider/items.py" />
+        <option value="$PROJECT_DIR$/jd_pc_spider/jd_pc_spider/pipelines.py" />
+        <option value="$PROJECT_DIR$/jd_pc_spider/launch.py" />
+        <option value="/usr/local/lib/python2.7/site-packages/scrapy/spiders/__init__.py" />
+        <option value="/usr/local/lib/python2.7/site-packages/scrapy/linkextractors/lxmlhtml.py" />
+        <option value="$PROJECT_DIR$/jd_pc_spider/jd_pc_spider/settings.py" />
+        <option value="$PROJECT_DIR$/jd_pc_spider/jd_pc_spider/spiders/DynamicSpider.py" />
+        <option value="$PROJECT_DIR$/jd_spider/jd_spider/spiders/zhihu_spider.py" />
+        <option value="$PROJECT_DIR$/jd_pc_spider/launch_zhihu.py" />
+        <option value="$PROJECT_DIR$/jd_pc_spider/jd_pc_spider/spiders/zhihu_spider.py" />
+        <option value="$PROJECT_DIR$/jd_pc_spider/jd_pc_spider/items.py" />
+        <option value="$PROJECT_DIR$/zhihu_spider/zhihu_spider/middlewares.py" />
+        <option value="$PROJECT_DIR$/zhihu_spider/zhihu_spider/pipelines.py" />
+        <option value="$PROJECT_DIR$/zhihu_spider/zhihu_spider/settings.py" />
+        <option value="$PROJECT_DIR$/zhihu_spider/zhihu_spider/items.py" />
+        <option value="$PROJECT_DIR$/zhihu_spider/zhihu_spider/__init__.py" />
+        <option value="$PROJECT_DIR$/zhihu_spider/__init__.py" />
+        <option value="$PROJECT_DIR$/zhihu_spider/zhihu_spider/spiders/zhihu_spider.py" />
+        <option value="$PROJECT_DIR$/zhihu/zhihu/launch.py" />
+        <option value="$PROJECT_DIR$/zhihu/launch.py" />
+        <option value="$PROJECT_DIR$/zhihu/zhihu/middlewares.py" />
+        <option value="/usr/local/lib/python2.7/site-packages/scrapy/http/request/form.py" />
+        <option value="/usr/local/lib/python2.7/site-packages/scrapy/linkextractors/__init__.py" />
+        <option value="$PROJECT_DIR$/zhihu/zhihu/settings.py" />
+        <option value="/usr/local/lib/python2.7/site-packages/scrapy/spiders/crawl.py" />
+        <option value="$PROJECT_DIR$/zhihu/zhihu/spiders/zhihu_spider.py" />
+        <option value="$PROJECT_DIR$/download_spider/download_spider/spiders/zhihu_cap.py" />
+        <option value="$PROJECT_DIR$/guanggoo_spider/launch.py" />
+        <option value="$PROJECT_DIR$/jd_pc_spider/jd_pc_spider/middlewares.py" />
+        <option value="$PROJECT_DIR$/jd_pc_spider/jd_pc_spider/user_agents.py" />
+        <option value="$PROJECT_DIR$/guanggoo_spider/guanggoo_spider/user_agents.py" />
+        <option value="$PROJECT_DIR$/guanggoo_spider/guanggoo_spider/middlewares.py" />
+        <option value="$PROJECT_DIR$/douban_spider/launch.py" />
+        <option value="$PROJECT_DIR$/douban_spider/douban_spider/spiders/email_spider.py" />
+        <option value="$PROJECT_DIR$/guanggoo_spider/guanggoo_spider/settings.py" />
+        <option value="$PROJECT_DIR$/guanggoo_spider/guanggoo_spider/spiders/LoginSpider.py" />
+        <option value="$PROJECT_DIR$/guanggoo_spider/guanggoo_spider/spiders/WeiboLogin.py" />
+        <option value="$PROJECT_DIR$/download_spider/download_spider/spiders/douban_captcha.py" />
+        <option value="$PROJECT_DIR$/download_spider/launch.py" />
+        <option value="$PROJECT_DIR$/download_spider/download_spider/user_agents.py" />
+        <option value="$PROJECT_DIR$/download_spider/download_spider/settings.py" />
+        <option value="$PROJECT_DIR$/download_spider/download_spider/pipelines.py" />
+        <option value="$PROJECT_DIR$/download_spider/download_spider/middlewares.py" />
+        <option value="$PROJECT_DIR$/download_spider/download_spider/items.py" />
+        <option value="$PROJECT_DIR$/douban_spider/douban_spider/middlewares.py" />
+        <option value="$PROJECT_DIR$/douban_spider/launch_email.py" />
+        <option value="$PROJECT_DIR$/douban_spider/launch_movie.py" />
+        <option value="$PROJECT_DIR$/douban_spider/douban_spider/spiders/movie_spider.py" />
+        <option value="$PROJECT_DIR$/douban_spider/douban_spider/items.py" />
+        <option value="$PROJECT_DIR$/douban_spider/douban_spider/pipelines.py" />
+        <option value="$PROJECT_DIR$/douban_spider/douban_spider/settings.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="72" />
+    <option name="y" value="23" />
+    <option name="width" value="1608" />
+    <option name="height" value="1027" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="scrapy_spiders" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scrapy_spiders" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scrapy_spiders" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scrapy_spiders" type="462c0819:PsiDirectoryNode" />
+              <item name="douban_spider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scrapy_spiders" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scrapy_spiders" type="462c0819:PsiDirectoryNode" />
+              <item name="douban_spider" type="462c0819:PsiDirectoryNode" />
+              <item name="douban_spider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scrapy_spiders" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scrapy_spiders" type="462c0819:PsiDirectoryNode" />
+              <item name="douban_spider" type="462c0819:PsiDirectoryNode" />
+              <item name="douban_spider" type="462c0819:PsiDirectoryNode" />
+              <item name="spiders" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/douban_spider" />
+      <recent name="$PROJECT_DIR$/guanggoo_spider/guanggoo_spider" />
+      <recent name="$PROJECT_DIR$/guanggoo_spider" />
+      <recent name="$PROJECT_DIR$/download_spider/download_spider" />
+      <recent name="$PROJECT_DIR$/zhihu_spider/zhihu_spider" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/zhihu" />
+      <recent name="$PROJECT_DIR$/zhihu_spider" />
+      <recent name="$PROJECT_DIR$/zhihu_spider/zhihu_spider" />
+      <recent name="$PROJECT_DIR$/zhihu_spider/zhihu_spider/spiders" />
+      <recent name="$PROJECT_DIR$/ip_area_spider/ip_area_spider/spiders" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="json_to_txt" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="scrapy_spiders" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ip_area_spider" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ip_area_spider/json_to_txt.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <module name="scrapy_spiders" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.json_to_txt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="316a2291-9914-47e7-9a9d-d9c6c50fece9" name="Default" comment="" />
+      <created>1503307640837</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1503307640837</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Update the code.">
+      <created>1504082247714</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1504082247714</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update the ReadMe.">
+      <created>1504083171691</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1504083171691</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update the json_to_txt.py script, Now it can generate sql file for update the mysql database.">
+      <created>1504684684601</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1504684684601</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="72" y="23" width="1608" height="1027" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19340795" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.19275825" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32806325" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32938075" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32806325" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32938075" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="DB Execution Console" order="7" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="DB Browser" order="2" />
+      <window_info anchor="right" id="Data View" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.20704375" />
+      <window_info anchor="right" x="145" y="123" width="1195" height="677" id="Documentation" order="3" type="FLOATING" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="DB Execution Console" order="7" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20325203" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32806325" />
+      <window_info anchor="right" id="Data View" order="3" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.19275825" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32938075" />
+      <window_info id="DB Browser" order="2" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32938075" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.256917" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32806325" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update the code." />
+    <MESSAGE value="Update the ReadMe." />
+    <MESSAGE value="Update the json_to_txt.py script, Now it can generate sql file for update the mysql database." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update the json_to_txt.py script, Now it can generate sql file for update the mysql database." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/jd_pc_spider/jd_pc_spider/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jd_pc_spider/jd_pc_spider/items.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jd_pc_spider/ghostdriver.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jd_pc_spider/jd_pc_spider/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="129" column="41" lean-forward="true" selection-start-line="129" selection-start-column="41" selection-end-line="129" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jd_pc_spider/jd_pc_spider/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/random.py" />
+    <entry file="file://$PROJECT_DIR$/jd_pc_spider/jd_pc_spider/user_agents.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="80" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guanggoo_spider/scrapy.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/site-packages/scrapy/http/request/form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jd_pc_spider/jd_pc_spider/spiders/DynamicSpider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guanggoo_spider/guanggoo_spider/user_agents.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="80" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/urllib/parse.py" />
+    <entry file="file://$PROJECT_DIR$/guanggoo_spider/guanggoo_spider/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-628">
+          <caret line="122" column="41" selection-start-line="122" selection-start-column="41" selection-end-line="122" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guanggoo_spider/guanggoo_spider/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/site-packages/scrapy/http/request/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/site-packages/faker/generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/site-packages/faker/utils/loading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/site-packages/faker/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/site-packages/faker/factory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="47" column="42" lean-forward="true" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/site-packages/faker/providers/person/zh_CN/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1198" />
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/site-packages/faker/providers/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2608">
+          <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/site-packages/faker/providers/user_agent/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1513">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guanggoo_spider/guanggoo_spider/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="59" column="72" selection-start-line="59" selection-start-column="72" selection-end-line="59" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guanggoo_spider/guanggoo_spider/spiders/LoginSpider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="66" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guanggoo_spider/guanggoo_spider/spiders/WeiboLogin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/download_spider/download_spider/spiders/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/download_spider/launch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/download_spider/download_spider/user_agents.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/download_spider/download_spider/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/download_spider/download_spider/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/download_spider/download_spider/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/download_spider/download_spider/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/download_spider/download_spider/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/download_spider/download_spider/spiders/douban_captcha.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/douban_spider/douban_spider/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/douban_spider/run_moviespider.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/douban_spider/movies.json" />
+    <entry file="file://$PROJECT_DIR$/douban_spider/launch_movie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/douban_spider/scrapy.log" />
+    <entry file="file://$PROJECT_DIR$/douban_spider/scrapy.cfg">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/douban_spider/launch_email.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/douban_spider/douban_spider/spiders/email_spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="75" column="77" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="77" />
+          <folding>
+            <element signature="e#186#199#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/douban_spider/douban_spider/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/__init__.py" />
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/1025205290/builtins.py" />
+    <entry file="file:///usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/typing.py" />
+    <entry file="file:///usr/local/lib/python3.6/site-packages/pymongo/collection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="2483" column="8" selection-start-line="2483" selection-start-column="8" selection-end-line="2483" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/douban_spider/douban_spider/spiders/movie_spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="67" column="36" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
+          <folding>
+            <element signature="e#204#215#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/douban_spider/douban_spider/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="78" column="1" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/douban_spider/douban_spider/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/douban_spider/douban_spider/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
