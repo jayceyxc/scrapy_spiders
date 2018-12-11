@@ -13,6 +13,7 @@ import scrapy
 import chardet
 import re
 import logging
+import urlparse
 
 from ..items import BaidubaikeItem
 from disease_name import disease_names
@@ -43,6 +44,15 @@ def extract_chinese(s):
     return out_str
 
 
+def extract_keyword(s):
+    result = urlparse.urlparse(s)
+    params = urlparse.parse_qs(result.query)
+    if 'wd' in params:
+        return params['wd'][0].decode('utf8')
+    else:
+        return ''
+
+
 class BaiduBaikeSpider(scrapy.Spider):
     name = "baiduBaikeSpider"
     url_pattern = "https://baike.baidu.com/item/%s"
@@ -50,6 +60,8 @@ class BaiduBaikeSpider(scrapy.Spider):
     mongo_uri = "127.0.0.1:19191"
     mongo_db = "baidu"
     collection_name = "baike"
+    searched_key = set()
+
     headersParameters = {  # 发送HTTP请求时的HEAD信息，用于伪装为浏览器
         'Connection': 'Keep-Alive',
         'Accept': 'text/html, application/xhtml+xml, */*',
@@ -61,10 +73,17 @@ class BaiduBaikeSpider(scrapy.Spider):
     def start_requests(self):
         for disease_name in disease_names:
             url = self.url_search_pattern % disease_name
-            yield scrapy.Request(url=url, callback=self.parse, headers=self.headersParameters)
+            if disease_name.decode('utf8') not in self.searched_key:
+                self.log("Add keyword {0} in start_requests".format(disease_name), logging.INFO)
+                self.searched_key.add(disease_name.decode('utf8'))
+                yield scrapy.Request(url=url, callback=self.parse, headers=self.headersParameters)
+            else:
+                self.log("keyword {0} already searched".format(disease_name), logging.INFO)
 
     def parse(self, response):
         self.log("search url: {0}".format(response.url), logging.INFO)
+        keyword = extract_keyword(response.url)
+        self.log("search keyword：{0}".format(keyword), logging.INFO)
         result_list = response.xpath('//div[@id="content_left"]/div')
         for result in result_list:
             try:
@@ -72,18 +91,27 @@ class BaiduBaikeSpider(scrapy.Spider):
                 title_xpath = result.xpath('./h3/a')
                 title = title_xpath.xpath('string(.)').extract()[0]
                 self.log('标题：' + title, logging.INFO)
-                text = result.xpath('./div[@class="f13"]/a/text()').extract()[0]
-                self.log('文本：' + text, logging.INFO)
-                url = result.xpath('./div[@class="f13"]/a/@href').extract()[0]
-                self.log('链接：' + url, logging.INFO)
-                if text.find('baike.baidu.com') != -1:
-                    self.log(url, logging.INFO)
+                if title.find('百度百科') != -1:
+                    title = title.split('_')[0].decode('utf8')
+                    if title != keyword:
+                        self.log('title：{0}, key_word：{1} 不一致'.format(title, keyword), logging.INFO)
+                        if title not in self.searched_key:
+                            self.log("Add keyword {0} in parse".format(title), logging.INFO)
+                            self.searched_key.add(title)
+                            url = self.url_search_pattern % title
+                            yield scrapy.Request(url=url, callback=self.parse, headers=self.headersParameters)
+                        else:
+                            self.log("keyword {0} already searched".format(title), logging.INFO)
+                    else:
+                        self.log('title：{0}, key_word：{1} 一致'.format(title, keyword), logging.INFO)
+                    url = result.xpath('./h3/a/@href').extract()[0]
+                    self.log('链接：' + url, logging.INFO)
                     yield scrapy.Request(url=url, callback=self.parse_baike, headers=self.headersParameters)
             except IndexError as ie:
                 self.log(ie, logging.ERROR)
 
     def parse_baike(self, response):
-        self.log('parse_baike' + response.url, logging.INFO)
+        self.log('parse_baike：' + response.url, logging.INFO)
         # main_info = response.xpath('//div[@class="main_tab main_tab-defaultTab curTab"]')
         main_str = ''
         try:
@@ -122,5 +150,10 @@ class BaiduBaikeSpider(scrapy.Spider):
         except IndexError as ie:
             self.log(ie, logging.ERROR)
             self.log("url: {0} has no title.".format(response.url), logging.ERROR)
+
+    def closed(self, reason):
+        self.log("call closed function. closed reason: {0}".format(reason), logging.INFO)
+        for keyword in self.searched_key:
+            self.log("searched key：{0}".format(keyword), logging.INFO)
 
 
