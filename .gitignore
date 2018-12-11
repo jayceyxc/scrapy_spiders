@@ -104,3 +104,4 @@ ENV/
 # my files
 *.txt
 *.json
+nohup.out
